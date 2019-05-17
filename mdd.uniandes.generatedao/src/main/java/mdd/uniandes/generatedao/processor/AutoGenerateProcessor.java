@@ -116,6 +116,101 @@ public class AutoGenerateProcessor extends AbstractProcessor {
     	
     	
     }
+    private void generateEntityClass(TableSerializable autoImplement, Element element)
+            throws Exception {
+
+        String pkg = getPackageName(element);
+
+        //delegate some processing to our FieldInfo class
+        FieldInfo fieldInfo = FieldInfo.get(element);
+
+        //the target interface name
+        String interfaceName = getTypeName(element);
+
+        //using our JClass to delegate most of the string appending there
+        JClass implClass = new JClass();
+        implClass.definePackage(pkg);
+        /*import javax.persistence.Entity;
+        import javax.persistence.GeneratedValue;
+        import javax.persistence.Id;
+        import javax.persistence.Table;*/
+        implClass.addImport("javax.persistence.Entity");
+        implClass.addImport("javax.persistence.GeneratedValue");
+        implClass.addImport("javax.persistence.Id");
+        implClass.addImport("javax.persistence.Table");
+        
+        implClass.defineClass("@Entity\n"+"@Table(name=\""+autoImplement.name()+"\")\npublic class ", autoImplement.name(), "implements " + interfaceName);
+
+        
+        //adding class fields
+        implClass.addField("int", "id", true);
+        implClass.addFields(fieldInfo.getFields());
+        
+      
+
+        //Empty constructor
+        implClass.addConstructor("public" ,  new ArrayList<String>());
+        //adding constructor with mandatory fields
+        implClass.addConstructor("public",fieldInfo.getMandatoryFields());
+        
+
+        
+        implClass.createGetterForField("id");
+        implClass.createSetterForField("id");
+        //generate methods
+        for (Map.Entry<String, String> entry : fieldInfo.getFields().entrySet()) {
+            String name = entry.getKey();
+            String type = entry.getValue();
+            boolean mandatory = fieldInfo.getMandatoryFields().contains(name);
+
+            implClass.createGetterForField(name);
+            implClass.createSetterForField(name);
+            
+        }
+        //finally generate class via Filer
+        generateClass(pkg + "." + autoImplement.name(), implClass.end());
+    }
+    
+    
+    private void generateDAOClass(TableSerializable autoImplement, Element element)
+            throws Exception {
+
+        String pkg = getPackageName(element);
+
+        //delegate some processing to our FieldInfo class
+        FieldInfo fieldInfo = FieldInfo.get(element);
+
+        //using our JClass to delegate most of the string appending there
+        JClass implClass = new JClass();
+        implClass.definePackage(pkg);
+        
+        implClass.addImport("java.util.List");
+        implClass.addImport("javax.persistence.EntityManager");
+        implClass.addImport("javax.persistence.EntityManagerFactory");
+        implClass.addImport("javax.persistence.EntityTransaction");
+        implClass.addImport("javax.persistence.Persistence");
+        implClass.addImport("javax.persistence.Query");
+        
+        implClass.defineClass("public class ", autoImplement.name()+"DatabaseManager", "");
+
+        //adding class fields
+        implClass.addField("EntityManagerFactory", "factory", false);
+        implClass.addField("EntityManager", "em", false);
+        
+        List<String> fields = Arrays.asList("factory", "em");
+        List<String> bindStrings = Arrays.asList("Persistence.createEntityManagerFactory(\"example\")", "factory.createEntityManager()");
+
+        //adding constructor with mandatory fields
+        implClass.addConstructor("public" ,fields,bindStrings);
+       
+
+        //generate methods
+        implClass.createDaoMethods(autoImplement.name());
+
+        
+        //finally generate class via Filer
+        generateClass(pkg + "." + autoImplement.name()+"DatabaseManager", implClass.end());
+    }
 
     
 

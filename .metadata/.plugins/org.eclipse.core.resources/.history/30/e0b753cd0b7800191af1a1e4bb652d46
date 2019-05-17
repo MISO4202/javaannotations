@@ -1,0 +1,30 @@
+package mdd.uniandes.generatedao.processor;
+
+import org.jtwig.JtwigModel;
+import org.jtwig.JtwigTemplate;
+
+public class TwigProcessor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		String[] fields= {"nombre","codigo","carrera"};
+		String[] fieldsTypes= {"Int","String","Boolean"};
+		JtwigTemplate template = JtwigTemplate.classpathTemplate("templates/entity.twig");
+        JtwigModel model = JtwigModel.newModel().with("className", "Estudiante");
+        model.with("interfaceName", "IEstudiante");
+        model.with("fields", fields);
+        model.with("fieldsTypes", fieldsTypes);
+        
+        JtwigTemplate template2 = JtwigTemplate.classpathTemplate("templates/databasemanager.twig");
+        JtwigModel model2 = JtwigModel.newModel().with("className", "Estudiante");
+        model2.with("package", "mdd.un.package");
+       
+        
+
+        //template.render(model, System.out);
+        template2.render(model2, System.out);
+	}
+
+}

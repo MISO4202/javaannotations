@@ -1,0 +1,19 @@
+package mdd.uniandes.generatedao.sql;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+class SerializationTest {
+
+	@Test
+	public void givenObjectSerializedThenTrueReturned() throws TableSerializationException {
+	    /*Estudiante estudiante = new Estudiante("12345678", "kevin", "sanchez", "Ingenieria de sistemas");
+	    ObjectToTableConverter serializer = new ObjectToTableConverter();
+	    String jsonString = serializer.convertToTable(estudiante);
+	    assertEquals(
+	      "INSERT INTO ESTUDIANTE (codigo,carrera_estudiante,nombre_estudiante,apellido_estudiante) VALUES (\"12345678\",\"Ingenieria de sistemas\",\"Kevin\",\"Sanchez\");",
+	      jsonString);*/
+	}
+
+}

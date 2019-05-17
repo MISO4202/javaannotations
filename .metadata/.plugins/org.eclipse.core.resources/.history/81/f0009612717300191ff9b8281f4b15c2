@@ -1,0 +1,22 @@
+
+@model
+operation loadModels() {
+
+  runTarget("load-models");
+  
+}
+
+@test
+operation nodosHuerfanos(){
+ 	runTarget("petrinet2graph");
+	var graph = Graph.allInstances().first();
+	var huerfanos = Graph!Node.allInstances().select(n|not Graph!Edge.allInstances().source.flatten().includes(n) and not Graph!Edge.allInstances().target.includes(n));
+	assertTrue("Hay nodos huerfanos", !huerfanos.isEmpty());
+}
+
+@test
+operation petrinetAvanzado(){
+	runTarget("petrinetAdvanced2graph");
+	
+  	assertEqualModels("GraphAdvancedExpected", "GraphAdvanced");
+}

@@ -1,0 +1,24 @@
+package mdd.uniandes.generatedao.example.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import mdd.uniandes.generatedao.example.Usuario;
+import mdd.uniandes.generatedao.example.UsuarioDatabaseManager;
+
+
+class UsuarioTest {
+
+	@Test
+	void test() {
+		Usuario usuario = new Usuario();
+		usuario.setUsername("kedavidsa");
+		UsuarioDatabaseManager db=UsuarioDatabaseManager.newInstance();
+		
+		db.saveUsuario(usuario);
+		
+		
+		fail("Not yet implemented");
+	}
+
+}

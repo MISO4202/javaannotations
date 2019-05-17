@@ -1,0 +1,10 @@
+package mdd.uniandes.generatedao.project;
+
+public class UsuarioUsage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

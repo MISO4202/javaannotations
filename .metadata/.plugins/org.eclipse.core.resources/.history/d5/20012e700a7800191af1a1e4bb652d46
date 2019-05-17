@@ -1,0 +1,34 @@
+package mdd.uniandes.generatedao.project;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+
+public class  {{className}}DatabaseManager  {
+private EntityManagerFactory factory;
+private EntityManager em;
+
+public {{className}}DatabaseManager() {
+this.factory = Persistence.createEntityManagerFactory("example");
+this.em = factory.createEntityManager();
+}
+
+public void saveEstudiante({{className}} {{className|lower}}) {
+EntityTransaction trans = em.getTransaction();
+		trans.begin();
+		em.persist(estudiante);
+		trans.commit();
+}
+
+
+public List<Estudiante> getEstudiante() {
+Query q = em.createQuery("SELECT e FROM Estudiante e", Estudiante.class);
+List<Estudiante> results = q.getResultList();
+return results;
+}
+
+
+}

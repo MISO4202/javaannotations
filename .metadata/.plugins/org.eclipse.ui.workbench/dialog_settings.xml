@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item key="dialogHeight" value="563"/>
+		<item key="dialogWidth" value="900"/>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textEntries">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.emf.cdo.category"/>
+			<item value="org.eclipse.epsilon.dt"/>
+			<item value="org.eclipse.emf.ecore.Wizard.category.ID"/>
+			<item value="org.eclipse.gmf.xpand.newWizards"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jdt.ui.java/org.eclipse.jdt.debug.ui.java"/>
+			<item value="org.eclipse.ocl.ui.wizards"/>
+			<item value="org.eclipse.papyrus.wizards.category"/>
+			<item value="org.eclipse.papyrus.wizards.category/org.eclipse.papyrus.wizards.toolsmiths.category"/>
+			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.eclipse.sirius.category"/>
+			<item value="org.eclipse.pde.userAssistance"/>
+			<item value="org.eclipse.wst.XMLCategory"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.ExternalProject"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="397"/>
+		<item key="DIALOG_Y_ORIGIN" value="44"/>
+	</section>
+</section>

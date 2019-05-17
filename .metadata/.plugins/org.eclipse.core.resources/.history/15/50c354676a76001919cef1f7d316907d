@@ -1,0 +1,5 @@
+package mdd.uniandes.generatedao.project;
+
+public interface IEstudiante {
+
+}

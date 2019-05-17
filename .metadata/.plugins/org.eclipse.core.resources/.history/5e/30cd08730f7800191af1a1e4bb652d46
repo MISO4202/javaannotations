@@ -1,0 +1,21 @@
+package mdd.uniandes.generatedao.test;
+
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        Estudiante estudiante= new Estudiante("Kevin Sanchez","123456","MISO");
+        EstudianteDatabaseManager db = new EstudianteDatabaseManager();
+        db.saveEstudiante(estudiante);
+        
+        System.out.println(db.getEstudiante());
+        
+    }
+}

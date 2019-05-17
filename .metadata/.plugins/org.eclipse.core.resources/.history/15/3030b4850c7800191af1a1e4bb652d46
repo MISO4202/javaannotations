@@ -1,0 +1,56 @@
+package {{package}};
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="{{className}}")
+public class {{className}} implements {{interfaceName}} {
+
+//--------------------------------------------------------
+//	ATTRIBUTES
+//--------------------------------------------------------
+@Id @GeneratedValue private int id;
+{% for key,name in fields %}
+private {{ field }} {{ key }};
+{% endfor %}
+
+
+public {{className}}() {
+}
+
+public {{className}}(
+{% for field in fields %}
+{%if(loop.index0 > 0)%},{%else%}{%endif%}{{fieldsTypes[ loop.index0 ]}} {{field}}
+{% endfor %}
+
+) {
+{% for field in fields %}
+this.{{ field }}={{ field }};
+{% endfor %}
+}
+
+//--------------------------------------------------------
+//	METHODS
+//--------------------------------------------------------
+public int getId() {
+ return this.id;
+}
+
+
+public void setId() {
+ this.id = id;
+}
+
+{% for field in fields %}
+public {{fieldsTypes[ loop.index0 ]}} get{{field| title}}() {
+ return this.{{field}};
+}
+public void set{{field| title}}({{fieldsTypes[ loop.index0 ]}} {{field}}) {
+ this.{{field}} = {{field}};
+}
+{% endfor %}
+
+}

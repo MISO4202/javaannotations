@@ -1,0 +1,10 @@
+package mdd.uniandes.generatedao.processor;
+
+public class TwigProcessor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

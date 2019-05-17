@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 7 resources" deleteContents="true" description="Delete 7 resources" element1="/org.xtext.eureka.eurekadsl" element2="/org.xtext.eureka.eurekadsl.ide" element3="/org.xtext.eureka.eurekadsl.tests" element4="/org.xtext.eureka.eurekadsl.ui" element5="/org.xtext.eureka.eurekadsl.ui.tests" element6="/uniandes.mdd.eureka2target" element7="/uniandes.mdd.eurekaspring.metamodels" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="7" stamp="1556912892941"/>
+</session>

@@ -1,0 +1,4 @@
+module mdd.uniandes.javaannotations {
+	requires org.junit.jupiter.api;
+	requires java.compiler;
+}

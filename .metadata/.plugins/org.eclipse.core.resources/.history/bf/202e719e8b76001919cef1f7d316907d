@@ -1,0 +1,19 @@
+package mdd.uniandes.generatedao.test;
+
+import mdd.uniandes.generatedao.project.Estudiante;
+import mdd.uniandes.generatedao.project.EstudianteDatabaseManager;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        Estudiante estudiante= new Estudiante("Kevin Sanchez","123456","MISO");
+        EstudianteDatabaseManager db = new EstudianteDatabaseManager();
+        
+    }
+}

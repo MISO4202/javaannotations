@@ -1,0 +1,14 @@
+package mdd.uniandes.generatedao.project;
+
+public class UsuarioUsage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Usuario usuario = new Usuario();
+		usuario.setUsername("kedavidsa");
+		UsuarioDatabaseManager db=UsuarioDatabaseManager.newInstance();		
+		db.saveUsuario(usuario);
+
+	}
+
+}

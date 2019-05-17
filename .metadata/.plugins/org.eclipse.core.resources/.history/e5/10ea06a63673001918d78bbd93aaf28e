@@ -1,0 +1,83 @@
+package mdd.uniandes.generatedao.test;
+
+
+
+@TableSerializable
+public class Estudiante {
+	
+	@TableColumn
+	private String codigo;
+	@TableColumn(column = "nombre_estudiante")
+	private String nombre;
+	@TableColumn(column = "apellido_estudiante")
+	private String apellido;
+	@TableColumn(column = "carrera_estudiante")
+	private String carrera;
+	
+	private int semestre;
+	
+	
+	
+	
+	public Estudiante(String codigo, String nombre, String apellido, String carrera, int semestre) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.carrera = carrera;
+		this.semestre = semestre;
+	}
+	
+	
+	public Estudiante(String codigo, String nombre, String apellido, String carrera) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.carrera = carrera;
+	}
+	
+	
+	@Init
+    private void initNames() {
+        this.nombre = this.nombre.substring(0, 1).toUpperCase() 
+          + this.nombre.substring(1);
+        this.apellido = this.apellido.substring(0, 1).toUpperCase() 
+          + this.apellido.substring(1);
+    }
+
+
+	public String getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+	public String getNombres() {
+		return nombre;
+	}
+	public void setNombres(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getApellido() {
+		return apellido;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public String getCarrera() {
+		return carrera;
+	}
+	public void setCarrera(String carrera) {
+		this.carrera = carrera;
+	}
+	public int getSemestre() {
+		return semestre;
+	}
+	public void setSemestre(int semestre) {
+		this.semestre = semestre;
+	}
+	
+	
+
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.Person"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.JSONSerializable"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.JSONSerializationException"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.ObjectToJsonConverter"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.TableSerializationException"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.ObjectToTableConverter"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.Estudiante"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.TableSerializable"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.TableColumn"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.Init"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.javaannotations.models.Estudiante"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.generatedao.annotations.Init"/>
+    <fullyQualifiedTypeName name="javax.lang.model.element.Element"/>
+    <fullyQualifiedTypeName name="javax.lang.model.SourceVersion"/>
+    <fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
+    <fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Query"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.generatedao.example.Usuario"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.generatedao.example.UsuarioDatabaseManager"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.generatedao.annotations.TableSerializable"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.generatedao.annotations.TableColumn"/>
+    <fullyQualifiedTypeName name="mdd.uniandes.generatedao.test.Estudiante"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.jtwig.JtwigTemplate"/>
+    <fullyQualifiedTypeName name="org.jtwig.JtwigModel"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+</qualifiedTypeNameHistroy>

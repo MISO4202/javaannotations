@@ -1,0 +1,50 @@
+package mdd.uniandes.generatedao.project;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+
+
+public class UsuarioDatabaseManager {
+	
+	public static UsuarioDatabaseManager usuarioDatabaseManager;
+	
+	// Setup the entity manager
+	EntityManagerFactory factory;
+	EntityManager em;
+	
+	
+	public static UsuarioDatabaseManager newInstance() {
+		if(usuarioDatabaseManager==null) {
+			usuarioDatabaseManager= new UsuarioDatabaseManager();
+		}
+		return usuarioDatabaseManager;
+		
+	}
+	
+	public UsuarioDatabaseManager() {
+		factory =  Persistence.createEntityManagerFactory("example");
+		em = factory.createEntityManager();
+	}
+	
+	
+	public void saveUsuario(Usuario usuario) {
+		EntityTransaction trans = em.getTransaction();
+		trans.begin();
+		em.persist(usuario);
+		trans.commit();
+	}
+	
+	public List<Usuario> getUsuarios() {		
+		Query q = em.createQuery("SELECT u FROM usuario u", Usuario.class);
+		List<Usuario> results = q.getResultList();			
+		return results;		
+	}
+	
+
+}

@@ -1,0 +1,11 @@
+package mdd.uniandes.generatedao.annotations;
+
+public class TableSerializationException extends RuntimeException {
+
+    private static final long serialVersionUID = 1L;
+
+    public TableSerializationException(String message) {
+        super(message);
+    }
+    
+}

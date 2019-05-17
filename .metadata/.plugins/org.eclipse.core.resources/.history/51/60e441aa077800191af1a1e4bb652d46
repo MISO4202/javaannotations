@@ -1,0 +1,23 @@
+package mdd.uniandes.generatedao.processor;
+
+import org.jtwig.JtwigModel;
+import org.jtwig.JtwigTemplate;
+
+public class TwigProcessor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		String[] fields= {"nombre","codigo","carrera"};
+		String[] fieldsTypes= {"String","String","String"};
+		JtwigTemplate template = JtwigTemplate.classpathTemplate("templates/entity.twig");
+        JtwigModel model = JtwigModel.newModel().with("className", "Estudiante");
+        model.with("interfaceName", "IEstudiante");
+        model.with("fields", fields);
+        
+
+        template.render(model, System.out);
+	}
+
+}

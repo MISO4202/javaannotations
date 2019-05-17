@@ -1,0 +1,37 @@
+package mdd.uniandes.generatedao.processor;
+
+import java.util.LinkedHashMap;
+
+import org.jtwig.JtwigModel;
+import org.jtwig.JtwigTemplate;
+
+public class TwigProcessor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		//String[] fields= {"nombre","codigo","carrera"};
+		String[] fieldsTypes= {"Int","String","Boolean"};
+		
+		LinkedHashMap< String, String> fields=new LinkedHashMap<String, String>();
+		fields.put("nombre", "String");
+		fields.put("codigo", "Int");
+		
+		JtwigTemplate template = JtwigTemplate.classpathTemplate("templates/entity.twig");
+        JtwigModel model = JtwigModel.newModel().with("className", "Estudiante");
+        model.with("interfaceName", "IEstudiante");
+        model.with("fields", fields);
+        model.with("fieldsTypes", fieldsTypes);
+        
+        JtwigTemplate template2 = JtwigTemplate.classpathTemplate("templates/databasemanager.twig");
+        JtwigModel model2 = JtwigModel.newModel().with("className", "Estudiante");
+        model2.with("package", "mdd.un.package");
+       
+        
+
+        //template.render(model, System.out);
+        template2.render(model2, System.out);
+	}
+
+}

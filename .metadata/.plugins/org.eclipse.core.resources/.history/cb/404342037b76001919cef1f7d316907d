@@ -1,0 +1,33 @@
+package mdd.uniandes.generatedao.project;
+import javax.persistence.Entity;import javax.persistence.GeneratedValue;import javax.persistence.Id;import javax.persistence.Table;
+
+@Entity
+@Table(name="Estudiante")
+public class  Estudiante implements IEstudiante {
+@Id @GeneratedValue private int id;
+private java.lang.String nombre;
+private java.lang.String codigo;
+private java.lang.String carrera;
+
+public Estudiante(java.lang.String nombre, java.lang.String codigo, java.lang.String carrera) {
+this.nombre = nombre;
+this.codigo = codigo;
+this.carrera = carrera;
+}
+
+public java.lang.String getNombre() {
+ return this.nombre;
+}
+
+
+public java.lang.String getCodigo() {
+ return this.codigo;
+}
+
+
+public java.lang.String getCarrera() {
+ return this.carrera;
+}
+
+
+}

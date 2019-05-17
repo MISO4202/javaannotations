@@ -1,0 +1,23 @@
+package mdd.uniandes.generatedao.processor;
+
+import java.io.File;
+
+import org.jtwig.JtwigModel;
+import org.jtwig.JtwigTemplate;
+
+public class TwigProcessor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		File file = new File(
+				TwigProcessor.class.getClassLoader().getResource("database.properties").getFile()
+			);
+		
+		JtwigTemplate template = JtwigTemplate.classpathTemplate("templates/example.twig");
+        JtwigModel model = JtwigModel.newModel().with("var", "World");
+
+        template.render(model, System.out);
+	}
+
+}

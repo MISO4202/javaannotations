@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExportRepresentationsAsImagesDialog">
+		<item key="ExportRepresentationsAsImagesDialog.imageFormat" value="PNG"/>
+		<list key="ExportRepresentationsAsImagesDialog.file">
+			<item value="/Users/kedavidsa/Desktop"/>
+			<item value="/Users/kedavidsa/Desktop/:Users:kedavidsa:Downloads:201910-proyecto-grupo2-master:uniandes.mdd.eurekaspring.metamodels:metamodels:eurekatarget.png"/>
+		</list>
+	</section>
+</section>

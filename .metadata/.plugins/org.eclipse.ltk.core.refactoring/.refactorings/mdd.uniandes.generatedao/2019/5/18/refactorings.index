@@ -1,0 +1,6 @@
+1556907095666	Delete element
+1556907125492	Rename type 'JSONSerializable'
+1556907157673	Rename type 'JSONElement'
+1556907199128	Rename type 'JSONSerializationException'
+1556907270347	Rename type 'ObjectToJsonConverter'
+1556908443151	Move compilation unit

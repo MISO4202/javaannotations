@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;uniandes.mdd.equipo3.metamodels.edit&apos;&#x0A;- Original project: &apos;uniandes.mdd.equipo3.metamodels.edit&apos;&#x0A;- Original element: &apos;CUnitedEcore.provider.OutputStringItemProvider.java&apos;" description="Delete element" element1="/src&lt;CUnitedEcore.provider{OutputStringItemProvider.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1557519162830" subPackages="false" version="1.0"/>
+</session>
